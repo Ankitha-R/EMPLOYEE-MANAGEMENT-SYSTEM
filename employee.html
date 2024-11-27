@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: rgba(30, 42, 56, 0.9);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+        }
+
+        /* Horizontal Scrolling Container */
+        .employee-scroll-container {
+            display: flex;
+            gap: 40px; /* Increased gap between the images */
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            padding: 20px 0;
+            -webkit-overflow-scrolling: touch;
+            justify-content: start;
+            align-items: center;
+            animation: scrollLeft 15s linear infinite;
+        }
+
+        /* Scroll animation to make it move left */
+        @keyframes scrollLeft {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .employee-card {
+            flex: 0 0 auto; /* Prevent shrinking and ensure horizontal alignment */
+            width: 300px;
+            /* Adding smooth box shadow for hover effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .employee-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Set fixed height */
+            object-fit: cover;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Ensure the cards are responsive on smaller screens */
+        @media (max-width: 768px) {
+            .employee-card {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .employee-card {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a href="index.html" class="navbar-brand fw-bold">EMPLOYEE SYSTEM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="employee.html" class="nav-link">Employees</a></li>
+                        <li class="nav-item"><a href="department.html" class="nav-link">Departments</a></li>
+                        <li class="nav-item"><a href="project.html" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 class="display-4">Meet Our Employees</h1>
+        <p>Your skills and contributions make our team stronger. Let's accomplish great things together!</p>
+    </div>
+
+    <!-- Employee Details Section -->
+    <div class="container py-5">
+        <div class="employee-scroll-container">
+            <!-- Employee Card 1 -->
+            <div class="employee-card">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/JOHN.jpg" class="card-img-top" alt="John Doe">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">
+                            <b>Position:</b> Senior Software Engineer<br>
+                            <b>Department:</b> Technology<br>
+                            <b>Employee ID:</b> E12345<br>
+                            <b>Location:</b> New York, USA<br>
+                            <b>Email:</b> john.doe@example.com<br>
+                            <b>Phone:</b> (123) 456-7890<br>
+                            <b>Manager:</b> Jane Smith<br>
+                            <b>Skills:</b> Java, Python, Machine Learning, Cloud Computing<br>
+                            <b>Joined:</b> January 15, 2020<br>
+                            <b>Employee Status:</b> Full-Time
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee Card 2 -->
+            <div class="employee-card">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/sara.webp" class="card-img-top" alt="Sarah Lee">
+                    <div class="card-body">
+                        <h5 class="card-title">Sarah Lee</h5>
+                        <p class="card-text">
+                            <b>Position:</b> HR Manager<br>
+                            <b>Department:</b> Human Resources<br>
+                            <b>Employee ID:</b> E12346<br>
+                            <b>Location:</b> London, UK<br>
+                            <b>Email:</b> sarah.lee@example.com<br>
+                            <b>Phone:</b> (987) 654-3210<br>
+                            <b>Manager:</b> Michael Johnson<br>
+                            <b>Skills:</b> Recruitment, Employee Relations, Conflict Resolution<br>
+                            <b>Joined:</b> March 3, 2018<br>
+                            <b>Employee Status:</b> Full-Time
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee Card 3 -->
+            <div class="employee-card">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/alex.jpg" class="card-img-top" alt="Alex Martinez">
+                    <div class="card-body">
+                        <h5 class="card-title">Alex Martinez</h5>
+                        <p class="card-text">
+                            <b>Position:</b> Marketing Specialist<br>
+                            <b>Department:</b> Marketing<br>
+                            <b>Employee ID:</b> E12347<br>
+                            <b>Location:</b> Toronto, Canada<br>
+                            <b>Email:</b> alex.martinez@example.com<br>
+                            <b>Phone:</b> (555) 123-9876<br>
+                            <b>Manager:</b> Laura Green<br>
+                            <b>Skills:</b> Digital Marketing, SEO, Content Creation, Social Media<br>
+                            <b>Joined:</b> June 10, 2021<br>
+                            <b>Employee Status:</b> Full-Time
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee Card 4 -->
+            <div class="employee-card">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/emily.webp" class="card-img-top" alt="Emily Clark">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Clark</h5>
+                        <p class="card-text">
+                            <b>Position:</b> Business Analyst<br>
+                            <b>Department:</b> Operations<br>
+                            <b>Employee ID:</b> E12348<br>
+                            <b>Location:</b> Sydney, Australia<br>
+                            <b>Email:</b> emily.clark@example.com<br>
+                            <b>Phone:</b> (333) 789-6540<br>
+                            <b>Manager:</b> Robert Brown<br>
+                            <b>Skills:</b> Data Analysis, Process Optimization, Reporting, SQL<br>
+                            <b>Joined:</b> August 25, 2022<br>
+                            <b>Employee Status:</b> Full-Time
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Employee System | All rights reserved.</p>
+    </footer>
+
+    <!-- JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
